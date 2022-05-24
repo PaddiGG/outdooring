@@ -3,7 +3,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "open": "cypress open",
+    "open-ct": "cypress open-ct",
+    "test:unit": "cypress run-ct",
+    "test:e2e": "cypress run",
+    "test": "yarn test:unit && yarn test:e2e"
   },
   "dependencies": {
     "next": "latest",
