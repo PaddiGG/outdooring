@@ -6,5 +6,6 @@
     "testFiles": "**/.*spec.tsx",
     "viewportHeight": 500,
     "viewportWidth": 700
-  }
+  },
+  "projectId": "p376js"
 }
