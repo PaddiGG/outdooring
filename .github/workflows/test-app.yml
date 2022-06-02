@@ -30,7 +30,7 @@ jobs:
         with:
           name: build
           if-no-files-found: error
-          path: build
+          path: .next
 
   cypress-run:
     timeout-minutes: 15
@@ -46,7 +46,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: build
+          path: .next
 
       - name: Cypress run
         uses: cypress-io/github-action@v4
