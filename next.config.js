@@ -1,7 +1,15 @@
+const { patchWebpackConfig } = require('next-global-css')
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  future: {
-    webpack5: true,
+  webpack: (config, options) => {
+    if (process.env.CYPRESS === 'true') {
+      //Allows importing the global.css file in cypress/support/component.ts
+      patchWebpackConfig(config, options)
+    }
+    return config
   },
 }
+
+module.exports = nextConfig
